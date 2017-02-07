@@ -41,6 +41,22 @@ header{
     padding: 5px;   
     z-index: 2;
 }
+.login{
+    color: aqua;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    background: #12131f;
+    z-index: 10;
+}
+.login>a{
+    display: inline-block;
+    color: aqua;    
+    padding: 10px;
+}
+
+
+
 .logo{ 
     float: left;
     border: 1px solid #ef0303;
