@@ -21,19 +21,20 @@
                 if ($conn->connect_errno) {
               die('Ошибка соединения: ' . $mysqli->connect_errno);
                 }
-           
+                   
+            $sql = "select * from users where log = '$log'  and pass = '$pass' ";
         
-            if(
-            ($stmt->prepare("SELECT pass FROM users WHERE log = '$log'") === FALSE)
-            or ($stmt->execute() === FALSE)
-            // получение буферизированного результата в виде mysqli_result,
-            or (($result = $stmt->get_result()) === FALSE)
-            or ($stmt->close() === FALSE)
-            ) {
-                die('Select Error (' . $stmt->errno . ') ' . $stmt->error);
+            $result = $conn->query($sql);
+        
+            if ($result->num_rows > 0){
+           
+                echo "login and password is correct";
+            }else {
+                echo "login or password is incorrect";
             }
         
             $result->close();
+            $conn->close();
            
         ?>    
     </body>
