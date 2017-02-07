@@ -10,17 +10,17 @@
         <?php
             $log = $_POST["log"];
             $pass = $_POST["pass"];
-            echo $pass;
-            $dblocation = "hedbed.mysql";
-            $dbname = "hedbed_db";
-            $dbuser = "hedbed_mysql";
-            $dbpasswd = "BCwU_1OO";
-            $mysqli = new mysqli($dblocation,$dbuser,$dbpasswd,$dbname);
-            $mysqli->set_charset("utf8");
-                if ($mysqli->connect_errno) {
+            echo $log;
+        echo $pass;
+            $dblocation = "localhost";
+            $dbname = "db";
+            $dbuser = "admin";
+            $dbpasswd = "777";
+            $conn = new mysqli($dblocation,$dbuser,$dbpasswd,$dbname);
+           
+                if ($conn->connect_errno) {
               die('Ошибка соединения: ' . $mysqli->connect_errno);
                 }
-            $stmt = $mysqli->stmt_init();
            
         
             if(
@@ -32,12 +32,8 @@
             ) {
                 die('Select Error (' . $stmt->errno . ') ' . $stmt->error);
             }
-            $row = $result->fetch_row();
-            if ($row[0]==$pass) echo "Верный пароль";
-            else echo "Неверный пароль";
         
             $result->close();
-            $mysqli->close();
            
         ?>    
     </body>

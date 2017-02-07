@@ -7,10 +7,10 @@
 </head>
 <body>
 <?php
-$dblocation = "hedbed.mysql";
-$dbname = "hedbed_db";
-$dbuser = "hedbed_mysql";
-$dbpasswd = "BCwU_1OO";
+$dblocation = "localhost";
+$dbname = "db";
+$dbuser = "admin";
+$dbpasswd = "777";
 $mysqli = new mysqli($dblocation,$dbuser,$dbpasswd,$dbname);
 $mysqli->set_charset("utf8");
 if ($mysqli->connect_errno) {
