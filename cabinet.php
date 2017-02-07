@@ -4,58 +4,50 @@
         <title>Личный кабинет</title>
         <link rel="shortcut icon" href="image/logo_100_100.png" type="image/x-icon">
         <meta charset="utf-8">
-        <link rel="stylesheet" href="index.css">
-        
-        <script src="jquery-3.1.1.js"></script>
+        <link rel="stylesheet" href="index.css">        
     </head>
     <body>
-        
- 
+        <div class="forms invisible" id="workers">
+            <form method="post">
+                    Данные работника<br>
+                <div id="datadiv">
+                    Фамилия:<input type="text" name="fam" value="бармалей"><br>
+                    Имя:<input type="text" name="name"><br>
+                    Ник:<input type="text" name="nic"><br>
+                    Телефон:<input type="text" name="tel"><br>
+                    Эл.почта:<input type="text" name="mail"><br>
+                </div>
+                    <input type="hidden" name="id">
+                    <input type="button" value="сохранить" id="submit">
+                    <input type="button" value="изменить" id="update" class="invisible">
+                    <input type="button" value="закрыть" id="closewokers"><br>
+                    <p id="res"></p>
+                    
+            </form>
+        </div>
         <header class="header">
             <a href="http://localhost"><img src="image/logo_100_100.png" class="logo"/></a>            
 		<nav>
             <ul class = "topmenu">
-                <li>Рассказы
+                <li>показать 
                     <ul class = "submenu">
-                        <li>роман</li>
-                        <li>рассказ</li>
-                        <li>Стихи</li>
+                        <li id="rabshow">работники</li>
+                        <li id="obj">объекты</li>
+                        <li id="rab">другое</li>
                     </ul>
                 </li>
                 <li><a href="https://ok.ru">odnok</a></li>
-                <li><a href="https://www.youtube.com/">youtube</a></li>
-                <li><a href="https://www.facebook.com/">facebook</a></li>
-                <li><a href="https://vk.com">vk</a></li>
-                <li><a href="https://www.hedbed.ru/check_in.html">skype</a></li> 
-
             </ul>
         </nav>
-        </header>      
-        
-          
-            
-            <div class='login'><a href='cabinet.php'><?php echo $_COOKIE['log'];  ?></a>/
+        </header>
+        <div class='login'><a href='cabinet.php'><?php echo $_COOKIE['log'];  ?></a>/
                 <a href="index.php" id="a"> выход </a>
-        
         </div>; 
-            
-        
-           
         <div class="container">
             <div class="leftcol">
-                <li><span>..........</span></li>                        
-                <li><a href="#g1">Глава1 <b>Встреча.</b></a></li>
-                <li><a href="#g2">Глава2 <b>Знакомство.</b></a></li>
-                <li><a href="#g3">Глава3 <b>Привязывание.</b></a></li>
-                <li><a href="#g4">Глава4 <b>Горячка.</b></a></li>
-                <li><a href="#g5">Глава5 <b>Любовь.</b></a></li>                     
-                               
+                
             </div>
-            <div class="rightcol">                
-                <h1>...........</h1>                
-                
-
-                
+            <div class="rightcol" id="table"> 
                 
             </div>
         </div>
@@ -65,11 +57,6 @@
             Магомедов Магомед Кадиевич.
         </div>
         </footer>
-       <script>           
-           document.getElementById('a').onclick = function (){               
-             var date = new Date(0);
-             document.cookie = "log=; path=/; expires=" + date.toUTCString();
-           }       
-        </script>
+       <script src="cabinet.js"/></script>
     </body>
 </html>

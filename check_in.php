@@ -41,7 +41,7 @@ if (isset($_COOKIE['log'])){
                 or ($stmt->execute() === FALSE)       // получение буферизированного результата в виде mysqli_result,
                 or ($stmt->close() === FALSE)) {
                                                 die('Select Error (' . $stmt->errno . ') ' . $stmt->error);
-                                                }
+            }
             else{
                 setcookie("log", $log);
                     header("Location: cabinet.php");
@@ -111,7 +111,7 @@ if (isset($_COOKIE['log'])){
 			xmlhttp = new XMLHttpRequest();
 		}
 		return xmlhttp;
-	}
+    }
     
 	var ajax = getXmlHttp();
     
