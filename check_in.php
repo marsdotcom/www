@@ -85,11 +85,13 @@ if (isset($_COOKIE['log'])){
     <body>
         <div class="view">
             <form method="post">
-                    Регистрация<br>
-                    nic:<input type="text" name="nic" ><br>
-                    логин:<input type="text" name="log" id="log" value=""><br>
-                    пароль:<input type="password" name="pass"><br>
-                    Почта:<input type="email" name="mail"><br>
+                <fieldset>
+                    <legend>Регистрация</legend>
+                    <label>nic:</label><input type="text" name="nic" ><br>
+                    <label>логин:</label><input type="text" name="log" id="log" value=""><br>
+                    <label>пароль:</label><input type="password" name="pass"><br>
+                    <label>Почта:</label><input type="email" name="mail"><br>
+                </fieldset>
                     <input type="submit" value="войти" id="submit" class="invisible">
             </form>
         </div>
