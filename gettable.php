@@ -45,7 +45,8 @@ if (isset($_POST['id'])){
     for($i=0; $i<$field_cnt; $i++){
         echo "<td>".$row[$i]."<td>";
     }
-        echo "<td><button name='bbb' value='$row[0]'>изменить</button></td>";
+        echo "<td><button name='bbb' class='bd'  value='$row[0]'>изменить</button></td>";
+        echo "<td><button name='ddd' class='bd'  value='$row[0]'>удалить</button></td>";
         echo "</tr>";
     }
     echo "</table>";
