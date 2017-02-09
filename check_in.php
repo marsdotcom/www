@@ -86,7 +86,7 @@ if (isset($_COOKIE['log'])){
         <div class="view">
             <form method="post">
                 <fieldset>
-                    <legend>Регистрация</legend>
+                    <legend>регистрация</legend>
                     <label>nic:</label><input type="text" name="nic" ><br>
                     <label>логин:</label><input type="text" name="log" id="log" value=""><br>
                     <label>пароль:</label><input type="password" name="pass"><br>
