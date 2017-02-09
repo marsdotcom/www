@@ -51,9 +51,8 @@ if (isset($_COOKIE['log'])){
                 
             }
             .view {
-                    padding: 10px;
-                    width: 250px;
-                    height: 100px;
+                    padding: 5px;
+                    width: 250px;                    
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -61,15 +60,23 @@ if (isset($_COOKIE['log'])){
                     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25), 7px 7px 5px rgba(0, 0, 0, 0.22);
                     background: #453e3e;
                 text-align: center;
-                                }
+            }
+            fieldset{
+                align-content: space-around;
+            }
+            legend {
+                text-align: left;
+            }
         </style>
     </head>
     <body>
         <div class="view">
             <form method="post">
-                    Аутентификация<br>
-                    логин:<input type="text" name="log"><br>
-                    пароль:<input type="password" name="pass"><br>
+                <fieldset>
+                    <legend>вход</legend>
+                    <label>логин:</label><input type="text" name="log"><br>
+                    <label>пароль:</label><input type="password" name="pass"><br>
+                </fieldset>    
                     <input type="submit" value="войти">
             </form>
         </div>
