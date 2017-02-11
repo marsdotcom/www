@@ -1,4 +1,4 @@
- 
+
  document.getElementById('a').onclick = function (){         // ===== функция для удаления куки ========//
  	var date = new Date(0);
  	document.cookie = "log=; path=/; expires=" + date.toUTCString();
@@ -6,9 +6,7 @@
 
 
  
-
  var workers = document.getElementById('form_workers'); 
-
 
  var obgects = document.getElementById('form_obgects');
 
@@ -51,26 +49,11 @@
 
  document.getElementById('workers').onclick = function (){   // =====  Выбор пункта меню Рабочие
 
-
  	currenttable = "workers";
-
 
  	var body = "table="+currenttable;
 
-
  	getData(body);    
-
- function click(event){
-
- 	if (currenttable!=="workers") return;
-
- 	var res = document.getElementById('res'),
- 	fam = document.getElementsByName('fam')[0].value,
- 	nam = document.getElementsByName('name')[0].value,
- 	nic = document.getElementsByName('nic')[0].value,
- 	tel = document.getElementsByName('tel')[0].value,
- 	mail = document.getElementsByName('mail')[0].value;
-
 
  }
 
@@ -86,28 +69,9 @@
  }
 
 
-
  document.getElementById('jobs').onclick = function(){    
 
  	currenttable = "jobs" ;
-
- document.getElementById('workers').onclick = function (){
-
- 	currenttable = "workers";
-
- 	var body = "table="+currenttable;
-
- 	getData(body);    
-
- }
-
-
- document.getElementById('objects').onclick = function (){
-
- 	currenttable = "objects";
-
- 	var body = "table="+currenttable;
-
 
  	var body = "table="+currenttable;
 
@@ -131,11 +95,6 @@
 
  function bdclick() 		//============ Обработчик кнопок; Добавить,Изменить,Удалить ================
  {
-
-
-
-
-
  	
  	var id = this.value; 
  	var name = this.getAttribute('name');
