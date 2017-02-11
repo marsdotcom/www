@@ -49,7 +49,7 @@
             </form>
         </div>
         <header class="header">
-            <a href="http://localhost"><img src="image/logo_100_100.png" class="logo"/></a>            
+            <a href="/index.php"><img src="image/logo_100_100.png" class="logo"/></a>            
 		<nav>
             <ul class = "topmenu">
                 <li>показать 

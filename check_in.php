@@ -32,7 +32,7 @@ if (isset($_COOKIE['log'])){
     if (isset($_POST["log"])){
         
             $log = $_POST["log"];
-            $pass = $_POST["pass"];
+            $pass =  md5($_POST["pass"]);
             $nic = $_POST["nic"];
             $mail = $_POST["mail"];            
             $stmt = $mysqli->stmt_init();       
@@ -66,11 +66,11 @@ if (isset($_COOKIE['log'])){
             .view {
                     padding: px;
                     width: 250px;
-                    height: 300px;
+                    height: 200px;
                     position: absolute;
                     top: 50%;
                     left: 50%;
-                    margin: -150px 0 0 -125px;                    
+                    margin: -100px 0 0 -125px;                    
                     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25), 7px 7px 5px rgba(0, 0, 0, 0.22);
                     background: #453e3e;
                 text-align: center;

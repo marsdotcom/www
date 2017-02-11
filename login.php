@@ -11,7 +11,7 @@ if (isset($_COOKIE['log'])){
             $log = $_POST["log"];
 
 
-            $pass = $_POST["pass"];
+            $pass = md5($_POST["pass"]);
         
             include "conectSQL.php";
         

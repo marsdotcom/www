@@ -13,7 +13,7 @@
     </head>
     <body> 
         <header class="header">
-            <a href="http://localhost"><img src="image/logo_100_100.png" class="logo"/></a>            
+            <a href="/index.php"><img src="image/logo_100_100.png" class="logo"/></a>            
 		<nav>
             <ul class = "topmenu">
                 <li>Рассказы
@@ -27,7 +27,7 @@
                 <li><a href="https://www.youtube.com/">youtube</a></li>
                 <li><a href="https://www.facebook.com/">facebook</a></li>
                 <li><a href="https://vk.com">vk</a></li>
-                <li><a href="https://www.hedbed.ru/check_in.html">skype</a></li>   
+                <li><a href="/check_in.php">Регистрация</a></li>   
             </ul>
         </nav>
         </header>
