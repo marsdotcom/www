@@ -7,7 +7,11 @@
         <link rel="stylesheet" href="index.css">        
     </head>
     <body>
+
         <div class="forms invisible" id="form_workers">
+
+        
+
             <form method="post">
                     Данные работника<br>
                 <div id="datadiv">
@@ -52,7 +56,11 @@
                     <ul id="tables" class = "submenu">
                         <li id="workers">работники</li>
                         <li id="objects">объекты</li>
+
                         <li id="jobs">другое</li>
+
+       
+
                     </ul>
                 </li>
                 <li><a href="https://ok.ru">odnok</a></li>
